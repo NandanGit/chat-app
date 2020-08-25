@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card {
+        min-width: 30%;
+      }
+    </style>
+
+    <title>Chat App</title>
+  </head>
+  <body class="bg-dark">
+    <!-- Starts here -->
+    <div class="card">
+      <div class="card-header">
+        <ul
+          class="nav nav-pills card-header-pills d-flex flex-row justify-content-around"
+        >
+          <li class="nav-item">
+            <a class="nav-link active disabled bg-secondary" href="/login"
+              >Sign In</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="/signup">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" />
+            <small class="form-text text-danger ml-1 text-hide">
+              Username must be provided
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" />
+            <small class="form-text text-danger ml-1 text-hide">
+              Username must be provided
+            </small>
+          </div>
+          <!-- <div class="form-group form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >Remember me</label
+            >
+          </div> -->
+          <button type="submit" class="btn btn-secondary btn-block">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Socket.io script -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="/js/login.js"></script>
+  </body>
+</html>
